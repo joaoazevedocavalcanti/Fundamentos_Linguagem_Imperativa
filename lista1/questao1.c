@@ -14,7 +14,7 @@ int main() {
         printf("Amor: %d%% Pessimo dia para se apaixonar.\n", amor);
     } else if (amor >= 20 && amor <= 40) {
         printf("Amor: %d%% Melhor manter o coracao <3 longe de perigo.\n", amor);
-    } else if (amor > 40 && amor <70) {
+    } else if (amor > 40 && amor < 70) {
         printf("Amor: %d%% Se o papo e as ideias baterem, esta liberado pensar em algo.\n", amor);
     } else if (amor >= 70 && amor <= 80) {
         printf("Amor: %d%% Saia com o coracao aberto, mas lembre, nem toda troca de olhar em onibus e sinal de romance.\n", amor);
@@ -27,7 +27,7 @@ int main() {
 
     if (sorte < 30){
         printf("Sorte: %d%% Nem jogue moedas pra cima hoje.", sorte);
-    } else if (sorte >=30 && sorte <= 50) {
+    } else if (sorte >= 30 && sorte <= 50) {
         printf("Sorte: %d%% Melhor nao arriscar.", sorte);
     } else if (sorte > 50 && sorte < 80) {
         printf ("Sorte: %d%% Por sua conta em risco.", sorte);
@@ -51,7 +51,7 @@ int main() {
     } else if (trabalho >= 70 && trabalho < 85) {
         printf("Trabalho: %d%% Boas vibracoes hoje, chances podem estar ao seu redor.\n", trabalho);
     } else {
-        printf("Trabalho: %d%% Use do maximo de networking possÃvel hoje, dia bom para negocios.\n", trabalho);
+        printf("Trabalho: %d%% Use do maximo de networking possível hoje, dia bom para negocios.\n", trabalho);
     }
     
     //COR 
@@ -60,37 +60,37 @@ int main() {
 
     switch (cor) {
         case 0: 
-            printf("Cor: Cinza.\n");
+            printf("Cor: Cinza.");
             break;
         case 1:
-            printf("Cor: Vermelho.\n");
+            printf("Cor: Vermelho.");
             break;
         case 2:
-            printf("Cor: Laranja.\n");
+            printf("Cor: Laranja.");
             break;
         case 3: 
-            printf("Cor: Amarelo.\n");
+            printf("Cor: Amarelo.");
             break;
         case 4: 
-            printf("Cor: Verde.\n");
+            printf("Cor: Verde.");
             break;
         case 5: 
-            printf("Cor: Azul.\n");
+            printf("Cor: Azul.");
             break;
         case 6: 
-            printf("Cor: Roxo.\n");
+            printf("Cor: Roxo.");
             break;
         case 7:
-            printf("Cor: Marrom.\n");
+            printf("Cor: Marrom.");
             break;
         case 8:
-            printf("Cor: Rosa.\n");
+            printf("Cor: Rosa.");
             break;
         case 9:
-            printf("Cor: Preto.\n");
+            printf("Cor: Preto.");
             break;
         case 10:
-            printf("Cor: Branco.\n");
+            printf("Cor: Branco.");
             break;
     }
 }
