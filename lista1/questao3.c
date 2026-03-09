@@ -3,6 +3,7 @@
 int main() {
     int premio, p1, p2, p3, resto; 
     int dinheiro_rebeka = 3;
+    int deucerto = 0;
 
     scanf("%d", &premio);
     scanf("%d", &p1);
@@ -39,6 +40,7 @@ int main() {
                 printf("Cada homem ficou com %d, %d e %d reais, respectivamente\n", (int)div1, (int)div2, (int)div3);
                 dinheiro_rebeka -= 1;
                 dinheiro_rebeka += resto; 
+                deucerto = 1;
             }
             
             //investir 2 reais
@@ -53,11 +55,12 @@ int main() {
                 printf("Cada homem ficou com %d, %d e %d reais, respectivamente\n", (int)div1, (int)div2, (int)div3);
                 dinheiro_rebeka -= 2;
                 dinheiro_rebeka += resto;
+                deucerto = 1;
                 //entrada das letras
-                int letra = 0;
+                char letra1, letra2;
                 int soma_letras = 0;
-                while ((letra = getchar()) != EOF){
-                    switch (letra) {
+                scanf(" %c %c", &letra1, &letra2);
+                    switch (letra1) {
                     case 'a':
                         soma_letras += 1;
                         break;
@@ -136,12 +139,94 @@ int main() {
                     case 'z':
                         soma_letras += 26;
                         break;
-                    case '\n':
                     case '\t':
                     case ' ':
                         break;
                     }
-                }
+                    //segunda letra
+                    switch (letra2) {
+                    case 'a':
+                        soma_letras += 1;
+                        break;
+                    case 'b': 
+                        soma_letras += 2;
+                        break;
+                    case 'c':
+                        soma_letras += 3;
+                        break;
+                    case 'd':
+                        soma_letras += 4;
+                        break;
+                    case 'e':
+                        soma_letras += 5;
+                        break;
+                    case 'f':
+                        soma_letras += 6;
+                        break;
+                    case 'g':
+                        soma_letras += 7;
+                        break;
+                    case 'h':
+                        soma_letras += 8;
+                        break;
+                    case 'i':
+                        soma_letras += 9;
+                        break;
+                    case 'j':
+                        soma_letras += 10;
+                        break;
+                    case 'k':
+                        soma_letras += 11;
+                        break;
+                    case 'l':
+                        soma_letras += 12;
+                        break;
+                    case 'm':
+                        soma_letras += 13;
+                        break;
+                    case 'n':
+                        soma_letras += 14; 
+                        break;
+                    case 'o':
+                        soma_letras += 15;
+                        break;
+                    case 'p':
+                        soma_letras += 16;
+                        break;
+                    case 'q':     
+                        soma_letras += 17;
+                        break;
+                    case 'r':
+                        soma_letras += 18;
+                        break;
+                    case 's':
+                        soma_letras += 19;
+                        break;        
+                    case 't':
+                        soma_letras += 20;    
+                        break;
+                    case 'u':
+                        soma_letras += 21;
+                        break;
+                    case 'v':
+                        soma_letras += 22;
+                        break;
+                    case 'w':
+                        soma_letras += 23;
+                        break;
+                    case 'x':
+                        soma_letras += 24;
+                        break;
+                    case 'y':
+                        soma_letras += 25;
+                        break;
+                    case 'z':
+                        soma_letras += 26;
+                        break;
+                    case '\t':
+                    case ' ':
+                        break;
+                    }
                 //print do resultado das letras
                 printf("%d\n", soma_letras);
             }    
@@ -158,6 +243,7 @@ int main() {
                 printf("Cada homem ficou com %d, %d e %d reais, respectivamente\n", (int)div1, (int)div2, (int)div3);
                 dinheiro_rebeka -= 3;
                 dinheiro_rebeka += resto;
+                deucerto = 1;
 
                 //entrada das idades e calculo das parcelas
                 int idade1, idade2, idade3;
@@ -175,7 +261,7 @@ int main() {
                 //print do resultado das idades
                 printf("%d\n", somaparcelas);
             }  
-            if (div1 != (int)div1 || div2 != (int)div2 || div3 != (int)div3){ //não é inteiro
+            if (deucerto == 0){ //não é inteiro
                 printf("Nao foi dessa vez que Rebeka pode ajudar...\n");
             } 
     }
