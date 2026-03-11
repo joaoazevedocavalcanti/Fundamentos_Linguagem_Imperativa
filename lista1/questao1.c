@@ -93,4 +93,6 @@ int main() {
             printf("Cor: Branco.");
             break;
     }
+
+    return 0;
 }

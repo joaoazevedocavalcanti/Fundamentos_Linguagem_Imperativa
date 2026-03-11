@@ -75,4 +75,6 @@ int main() {
             printf("%d passos em y e %d passos em x", y_deslocamento, x_deslocamento);
         }
     }
+
+    return 0;
 }

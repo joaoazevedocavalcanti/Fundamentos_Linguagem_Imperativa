@@ -34,4 +34,6 @@ int main() {
     } else {
         printf("Opa xupenio AULAS...");
     }
+
+    return 0;
 }
