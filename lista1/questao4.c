@@ -5,7 +5,7 @@ int main() {
     int x_inicial, y_inicial, x_final, y_final, quadrante_evitado, quadrante_inicial;
     scanf("%d %d %d", &x_inicial, &y_inicial, &quadrante_evitado);
 
-    //seprando os quadrantes inciais e o x e y finais
+    //separando os quadrantes inciais e o x e y finais
     if (x_inicial > 0 && y_inicial > 0) {
         quadrante_inicial = 1;
         x_final = -1;
@@ -42,6 +42,7 @@ int main() {
         } else if (quadrante_evitado == 2) {
             printf("%d passos em y e %d passos em x", y_deslocamento, x_deslocamento);
         }
+
     //quadrante final 2 e quer chegar no 4
     } else if (quadrante_inicial == 2) {
         x_deslocamento = abs(x_final - x_inicial);
@@ -53,6 +54,7 @@ int main() {
         } else if (quadrante_evitado == 1) {
             printf("%d passos em y e %d passos em x", y_deslocamento, x_deslocamento);
         }
+
     //quadrante inicial 3 e quer chegar no 1
     } else if (quadrante_inicial == 3) {
         x_deslocamento = abs(x_final - x_inicial);
@@ -64,6 +66,8 @@ int main() {
         } else if (quadrante_evitado == 4) {
             printf("%d passos em y e %d passos em x", y_deslocamento, x_deslocamento);
         }
+        
+    //quadrante incial 4 quer chegar no 2 
     } else if (quadrante_inicial == 4) {
         x_deslocamento = abs(x_final - x_inicial);
         y_deslocamento = abs(y_final - y_inicial);

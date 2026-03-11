@@ -19,20 +19,17 @@ int main() {
         div1 = premio * p1 / 100;
         div2 = premio * p2 / 100;
         div3 = premio * p3 / 100;
-        //print do valor que cada homem ficou
         printf("Cada homem ficou com %d, %d e %d reais, respectivamente\n", div1, div2, div3);
-
         resto = premio - (int)(div1 + div2 + div3);
-        //sobrou alguma coisa
         if (resto > 0){
             dinheiro_rebeka += resto;
         }
     }
     else{ //não é inteiro
 
-            //investir um real 
-            //as divisões são interias e o resto é maior ou igual a 2 (1 a mais do que ela investiu)
+            //INVESTIR UM REAL
             int premio1 = premio + 1;
+            //as divisões são interias e o resto é maior ou igual a 2 (1 a mais do que ela investiu)
             if ((premio1 * p1) % 100 == 0 && (premio1 * p2) % 100 == 0 && (premio1 * p3) % 100 == 0) {
                 div1 = premio1 * (p1/100.0);
                 div2 = premio1 * (p2/100.0);
@@ -46,7 +43,7 @@ int main() {
                 }
             }
 
-            //investir 2 reais
+            //INVESTIR 2 REAIS
             int premio2 = premio + 2;
             //as divisões são inteiras e o resto é maior ou igual a 3 (1 a mais do que ela investiu)
             if ((premio2 * p1) % 100 == 0 && (premio2 * p2) % 100 == 0 && (premio2 * p3) % 100 == 0) {
@@ -55,27 +52,24 @@ int main() {
                 div3 = premio2 * (p3/100.0);
                 resto = premio2 - (div1 + div2 + div3);
                 if (resto > 2){
-                    //print do valor que cada homem ficou
                     printf("Cada homem ficou com %d, %d e %d reais, respectivamente\n", div1, div2, div3);
                     dinheiro_rebeka -= 2;
                     dinheiro_rebeka += resto;
                     deucerto = 1;
+
                     //entrada das letras
                     char letra1, letra2, letra3;
                     int soma_letras = 0;
                     scanf(" %c %c %c", &letra1, &letra2, &letra3);
-                    
                     letra1 -= 96;
                     letra2 -= 96; 
                     letra3 -= 96;
                     soma_letras = letra1 + letra2 + letra3;
-
-                    //print do resultado das letras
                     printf("%d\n", soma_letras);
                 }
             }    
 
-            //investir 3 reais
+            //INVESTIR 3 REAIS 
             int premio3 = premio + 3;
             //as divisões são inteiras e o resto é maior ou igual a 4 (1 a mais do que ela investiu)
             if ((premio3 * p1) % 100 == 0 && (premio3 * p2) % 100 == 0 && (premio3 * p3) % 100 == 0) {
@@ -84,7 +78,6 @@ int main() {
                 div3 = premio3 * (p3/100.0);
                 resto = premio3 - (div1 + div2 + div3);
                 if (resto > 3){
-                    //print do valor que cada homem ficou
                     printf("Cada homem ficou com %d, %d e %d reais, respectivamente\n", div1, div2, div3);
                     dinheiro_rebeka -= 3;
                     dinheiro_rebeka += resto;
@@ -104,13 +97,16 @@ int main() {
                 if (idade3 % 3 == 0){
                     somaparcelas += idade3 / 3;
                 }
-                //print do resultado das idades
                 printf("%d\n", somaparcelas);
             }  
-            if (deucerto == 0){ //não é inteiro
+
+            //Caso todos os incrementos não derem certo
+            if (deucerto == 0){ 
                 printf("Nao foi dessa vez que Rebeka pode ajudar...\n");
             } 
-    }
+        }
+
+    // condição se a rebeka vai ter dinheiro pra voltar ou n
     if (dinheiro_rebeka >= 7){
         printf("Ela conseguiu! Rebeka voltou para casa e apanhou da mae por sumir noite passada!\n");
     } else {
