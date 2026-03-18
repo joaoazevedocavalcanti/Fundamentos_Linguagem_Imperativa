@@ -15,7 +15,9 @@ int main() {
         int resultado, diferenca, melhor_resultado_canal, melhor_minuto_canal;
         int menor_diferenca_canal = __INT_MAX__;
 
-        while(termo1 <= numero_Xupenio){
+        int uma_vez = 0;
+        while(termo1 <= numero_Xupenio || uma_vez == 0){
+            uma_vez++;
             //sequencia
             if (minuto == 1){
                 resultado = termo1;
@@ -45,12 +47,15 @@ int main() {
         }
     }
     //verificação do VIP
-    int d1 = melhor_resultado / 10;
-    int d2 = melhor_resultado % 10;
-    int VIP = d1 + d2;
+    int VIP = 0;
+    int algarismo;
+    while (melhor_resultado > 0){ 
+        VIP += melhor_resultado % 10;
+        melhor_resultado /= 10;
+    }
     if (VIP > 10){
         printf("Xupenio, para ir ao lulupalooza vc deve entrar no canal %d e sera chamado mais ou menos no minuto %d e com o VIP garantido!!!\n", melhor_canal, melhor_minuto);
     } else {
-        printf("Xupenio, para ir ao lulupalooza vc deve entrar no canal %d e sera chamado mais ou menos no minuto %d, mas o ingresso VIP n�o vai rolar :(\n", melhor_canal, melhor_minuto);
+        printf("Xupenio, para ir ao lulupalooza vc deve entrar no canal %d e sera chamado mais ou menos no minuto %d, mas o ingresso VIP não vai rolar :(\n", melhor_canal, melhor_minuto);
     }
 }
