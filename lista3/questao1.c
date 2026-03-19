@@ -13,6 +13,7 @@ int main(){
 
         int sequencia[tamanho_array]; //definindo o array
 
+        //adicionando no vetor
         for (int i = 0; i < tamanho_array; i++){
             scanf("%d", &sequencia[i]);
         }
@@ -38,8 +39,8 @@ int main(){
         }
 
         if (tamanho_atual > tamanho_geral){
-                tamanho_geral = tamanho_atual;
-                inicio_geral = inicio_atual;
+            tamanho_geral = tamanho_atual;
+            inicio_geral = inicio_atual;
         }
 
         //caso exista sequencia
@@ -57,7 +58,6 @@ int main(){
         else { //caso não exista sequencia
             printf("%d\n", tamanho_geral);
         }
-            
-
     }
+    return 0;
 }
