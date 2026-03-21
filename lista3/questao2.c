@@ -92,11 +92,13 @@ int main() {
     //caso não tenha vencedor
     } else {
         //caso seja plural
-        if (qt_total_latas > 0){
+        if (qt_total_latas > 1){
         printf("Ainda nao foram vendidas latas suficientes. Faltam %d latas.", qt_total_latas);
         //singular
-    } else {
-        printf("Ainda nao foram vendidas latas suficientes. Falta 1 lata.", qt_total_latas);
+        } else {
+            printf("Ainda nao foram vendidas latas suficientes. Falta 1 lata.", qt_total_latas);
+        }
     }
-    }
+
+    return 0;
 }
