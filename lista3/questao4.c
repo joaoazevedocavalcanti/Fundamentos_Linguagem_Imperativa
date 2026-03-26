@@ -4,7 +4,7 @@
 
 int main() {
     //entrada do numero de casos
-    int numero_casos;
+    int numero_casos, tamanho_led_grande;
     scanf("%d", &numero_casos);
 
     int tamanhos[100]; //variavel para armazenar o tamanho dos leds menores
@@ -29,11 +29,11 @@ int main() {
             else if (led[0] == 'O'){
                 led[0] = 'X';
                 //laço para realizar a mudança
-                for (int m = 0; m < tamanhos[i]; m++){
-                    if (led[m + 1] == 'O'){
-                        led[m + 1] = 'X';
+                for (int m = 1; m < tamanhos[i]; m++){
+                    if (led[m] == 'O'){
+                        led[m] = 'X';
                     } else {
-                        led[m+1] = 'O';
+                        led[m] = 'O';
                         break;
                     }
                 }
@@ -53,7 +53,7 @@ int main() {
             }
         }
         else { //caso não seja a primeira
-            int tamanho_led_grande = strlen(led_grande); //variavel que vai guardar o tamanho para ajudar na adição
+            tamanho_led_grande = strlen(led_grande); //variavel que vai guardar o tamanho para ajudar na adição
             char estado_ultimo_led = led_grande[tamanho_led_grande - 1];
             char fio;
             //verificação do fio
@@ -79,11 +79,14 @@ int main() {
 
             for (int lg = 0; led[lg] != '\0'; lg++){
                 led_grande[tamanho_led_grande + lg] = led[lg];
-            } 
+            }
+            tamanho_led_grande += tamanhos[i];  
         }   
     }
-    for (int plg = 0; led_grande[plg] != '\0'; plg++){
-        printf("%c", led_grande[plg]);
-    }
+    led_grande[tamanho_led_grande] = '\0';
+        printf("%s", led_grande);
+
+    return 0;
 }
+
 
