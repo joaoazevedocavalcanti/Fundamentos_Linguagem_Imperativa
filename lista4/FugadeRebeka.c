@@ -29,6 +29,7 @@ int percorrendo(int linha_rebeka, int coluna_rebeka, int linhas, int colunas, ch
     }
 
     //organizar o caminho
+    qt_movimentos[0]-=1;
     labirinto_visitado[linha_rebeka][coluna_rebeka] = 0;
     return 0;
 }
