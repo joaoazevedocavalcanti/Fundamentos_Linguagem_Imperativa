@@ -65,8 +65,7 @@ int main() {
 
         } else if (strcmp(comando, "ADD") == 0) {
             Aluno* a = malloc(sizeof(Aluno));
-            scanf("%s %d %lf %lld %lld",
-                  a->mat, &a->pri, &a->cr, &a->L, &a->R);
+            scanf("%s %d %lf %lld %lld", a->mat, &a->pri, &a->cr, &a->L, &a->R);
 
             a->score = (int)round(a->cr * 100) / a->pri;
             a->prox = NULL;
